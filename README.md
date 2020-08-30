@@ -27,3 +27,23 @@
 2. 재사용성이 높다
 3. 유지보수가 쉽다.
 
+
+
+### React 프로젝트 만들기
+
+##### #방법 1
+
+```bash
+npx create-react-app my-app
+```
+
+- `npx` 
+  - npm을 사용해서 `create-react-app`을 1회 다운받고 실행하고 지워버린다.
+  - 사용하는 이유는 항상 최신 버전의 `create-react-app`을 다운 받아주기 때문이다.
+
+##### #방법 2
+
+```bash
+npm create-react-app my-app
+```
+
