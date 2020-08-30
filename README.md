@@ -2,32 +2,48 @@
 
 
 
-생활코딩에서 공부하고 있습니다.
+- 생활코딩에서 공부하고 있습니다.
 
+- 프로젝트명: `react-app`
 
+​          
 
+### 목차          
 
+(React가 무엇인가요?)[###React가-무엇인가요?]
 
-### React 가 무엇인가요?
+(React의 특징)[###React의-특징]
+
+(React의 장점)[###React의-장점]
+
+(React 프로젝트 만들기)[###React-프로젝트-만들기]
+
+(React 프로젝트 배포하기)[###React-프로젝트-배포하기]
+
+### React가 무엇인가요?
 
 - 래엑트는 페이스북 닷컴의 UI를 더 잘만들기 위해서 나오게됨
 - 페이스북에서 만든 JavaScript UI Library 이다
 
-
+​          
 
 ### React의 특징
 
 - 컴포넌트를 사용한다.
+- 유사 JavaScript 언어이다.
+- Jsx 파일 형식을 가지고 있으며 이 파일 형식이 이해하는 react 언어를 사용하게 된다.
 
+​          
 
-
-
+### React의 장점
 
 1. 가독성이 높다
 2. 재사용성이 높다
 3. 유지보수가 쉽다.
 
+​          
 
+​          
 
 ### React 프로젝트 만들기
 
@@ -280,6 +296,87 @@ class App extends Component {
        <Subject title="WEB" sub="World Wide Web"></Subject>
        <Subject title="React" sub="For UI"></Subject>
        <TOC></TOC>
+       <Content title="HTML" desc="HTML is HyperText Markup Language."></Content>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+
+
+
+
+
+
+### state 활용하기
+
+- props : 사용자가 보는 데이터
+
+- states : props 값에 따라 내부적으로 갖는 데이터
+
+
+
+components/TOC.js
+
+```react
+import React, { Component } from 'react';
+
+class TOC extends Component {
+    render() {
+      var lists = [];
+      var data = this.props.data;
+      var i = 0;
+      while(i < data.length) {
+        lists.push(<li key={data[i].id}><a href={"/content/"+data[i].id}>{data[i].title}</a></li>);
+        i = i + 1;
+      }
+      return (
+        <nav>
+            <ul>
+                {lists}
+            </ul>
+        </nav>
+      );
+    }
+  }
+
+  export default TOC;
+```
+
+​            
+
+App.js
+
+```react
+import React, { Component } from 'react';
+import TOC from "./components/TOC";
+import Content from "./components/Content";
+import Subject from "./components/Subject";
+import './App.css';
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      subject: {
+        title:  'WEB', sub:'World Wide Web!'},
+        contents:[
+          {id:1, title: 'HTML', desc:'HTML is for information'},
+          {id:2, title: 'CSS', desc:'CSS is for design'},
+          {id:3, title: 'JavaScript', desc:'JavaScript is for interactive'}
+        ]
+      }
+    }
+
+  render() {
+    return (
+      <div className="App">
+       <Subject title={this.state.subject.title} sub={this.state.subject.sub}></Subject>
+       <Subject title="React" sub="For UI"></Subject>
+       <TOC data={this.state.contents}></TOC>
        <Content title="HTML" desc="HTML is HyperText Markup Language."></Content>
       </div>
     );
