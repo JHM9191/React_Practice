@@ -47,3 +47,37 @@ npx create-react-app my-app
 npm create-react-app my-app
 ```
 
+
+
+​          
+
+
+
+### React 프로젝트 배포하기
+
+```bash
+npm run start
+```
+
+
+
+- React-create-app 으로 새로운 프로젝트를 생성하게 되면  react 의 이것 저것 필요한 모듈들 여러개 설치가 되면서 프로젝트가 무거워지고 
+- 이 앱을 바로 서버에 올리게되면 사용자들이 이 무거운 프로젝트를 실행하게 되는데.
+- 실제로 사용되고 있는 모듈 등으로만 파일을 정리하고 이 파일을 배포하는 명령어는 다음과 같다.
+
+```bash
+npm run build
+```
+
+```bash
+npx serve -s build
+```
+
+- Serve 라는 웹서버를 다운 받아서 실행시킬 때 build 라는 우리가 생성한 디렉토리를 Document root로 실행하는 것이다.
+
+​          
+
+
+
+### Component 생성하기
+
