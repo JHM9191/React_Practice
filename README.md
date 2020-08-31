@@ -3,6 +3,7 @@
 
 
 - 생활코딩에서 공부하고 있습니다.
+- [medium](https://medium.com/wasd/기초부터-배우는-react-js-1531b18f7bb2)
 
 - 프로젝트명: `react-app`
 
@@ -10,15 +11,15 @@
 
 ### 목차          
 
-- [React가 무엇인가요?](###React가-무엇인가요?)
+- [React가 무엇인가요?](#React가-무엇인가요?)
 
-- [React의 특징](###React의-특징)
+- [React의 특징](#React의-특징)
 
-- [React의 장점](###React의-장점)
+- [React의 장점](#React의-장점)
 
-- [React 프로젝트 만들기](###React-프로젝트-만들기)
+- [React 프로젝트 만들기](#React-프로젝트-만들기)
 
-- [React 프로젝트 배포하기](###React-프로젝트-배포하기)
+- [React 프로젝트 배포하기](#React-프로젝트-배포하기)
 
 ​                  
 
